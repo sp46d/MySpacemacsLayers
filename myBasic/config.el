@@ -14,7 +14,7 @@
   "Sort dired listings with directories first."
   (save-excursion
     (let (buffer-read-only)
-      (forward-line 2) ;; beyond dir. header 
+      (forward-line 2) ;; beyond dir. header
       (sort-regexp-fields t "^.*$" "[ ]*." (point) (point-max)))
     (set-buffer-modified-p nil)))
 
@@ -37,3 +37,38 @@
 ;; Line wrapper
 (global-visual-line-mode)
 (add-hook 'text-mode-hook 'spacemacs/toggle-visual-line-navigation-on)
+
+;; Customize Solarized-theme
+(defvar after-load-theme-hook nil
+  "Hook run after a color theme is loaded using `load-theme'.")
+(defadvice load-theme (after run-after-load-theme-hook activate)
+  "Run `after-load-theme-hook'."
+  (run-hooks 'after-load-theme-hook))
+(defun customize-solarized ()
+  "Customize solarized theme"
+  (if (member 'solarized-dark custom-enabled-themes)
+      (custom-theme-set-faces
+       'solarized-dark
+       ;; Org block
+       '(org-block-begin-line ((t (:foreground "#9EA0E5":background "#073642"))))
+       '(org-block-end-line ((t (:foreground "#9EA0E5":background "#073642"))))
+       ;; Power line
+       '(powerline-active1 ((t (:background "#5D4D7A" :foreground "#b2b2b2"))))
+       '(powerline-active2 ((t (:background "#5D4D7A" :foreground "#b2b2b2"))))
+       '(powerline-inactive1 ((t (:background "#212026" :foreground "#b2b2b2"))))
+       '(powerline-inactive2 ((t (:background "#212026" :foreground "#b2b2b2"))))
+       ))
+  (if (member 'solarized-light custom-enabled-themes)
+      (custom-theme-set-faces
+       'solarized-light
+       ;; Org block
+       '(org-block-begin-line ((t (:foreground "#3f4d91":background "#eee8d5"))))
+       '(org-block-end-line ((t (:foreground "#3f4d91":background "#eee8d5"))))
+       ;; Power line
+       '(powerline-active1 ((t (:background "#D3D3E7" :foreground "#655370"))))
+       '(powerline-active2 ((t (:background "#D3D3E7" :foreground "#655370"))))
+       '(powerline-inactive1 ((t (:background "#EFEAE9" :foreground "#655370"))))
+       '(powerline-inactive2 ((t (:background "#EFEAE9" :foreground "#655370"))))
+       )))
+(customize-solarized)
+(add-hook 'after-load-theme-hook 'customize-solarized)
