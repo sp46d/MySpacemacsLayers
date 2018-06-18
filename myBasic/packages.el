@@ -18,7 +18,9 @@
   (use-package reveal-in-osx-finder
     ;; :commands (reveal-in-osx-finder)
     :init
-    (spacemacs/set-leader-keys "o" 'reveal-in-osx-finder)))
+    (progn
+      (spacemacs/declare-prefix "o" "my-prefix")
+      (spacemacs/set-leader-keys "oo" 'reveal-in-osx-finder))))
 
 (defun myBasic/init-interleave ()
   (use-package interleave
