@@ -55,8 +55,8 @@
        ;; Power line
        '(powerline-active1 ((t (:background "#5D4D7A" :foreground "#b2b2b2"))))
        '(powerline-active2 ((t (:background "#5D4D7A" :foreground "#b2b2b2"))))
-       '(powerline-inactive1 ((t (:background "#212026" :foreground "#b2b2b2"))))
-       '(powerline-inactive2 ((t (:background "#212026" :foreground "#b2b2b2"))))
+       '(powerline-inactive1 ((t (:background "#073642" :foreground "#586e75"))))
+       '(powerline-inactive2 ((t (:background "#073642" :foreground "#586e75"))))
        ))
   (if (member 'solarized-light custom-enabled-themes)
       (custom-theme-set-faces
