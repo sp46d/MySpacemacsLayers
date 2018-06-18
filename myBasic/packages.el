@@ -17,7 +17,7 @@
 (defun myBasic/init-reveal-in-osx-finder ()
   (use-package reveal-in-osx-finder
     ;; :commands (reveal-in-osx-finder)
-    :config
+    :init
     (spacemacs/set-leader-keys "o" 'reveal-in-osx-finder)))
 
 (defun myBasic/init-interleave ()
