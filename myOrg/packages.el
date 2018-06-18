@@ -499,9 +499,10 @@ Headline^^            Visit entry^^               Filter^^                    Da
 (defun myOrg/init-org-gcal ()
   (use-package org-gcal
     :commands (org-gcal-sync)
+    :init
+    (add-hook 'org-agenda-mode-hook (lambda () (org-gcal-sync)))
     :config
     (progn
-      (add-hook 'org-agenda-mode-hook (lambda () (org-gcal-sync)))
       (setq org-gcal-client-id "525899375201-00hs1dks72ihc8vcrj013dv03ssg0qj2.apps.googleusercontent.com"
             org-gcal-client-secret "sosBUGNTGwz4W6Df9VgRKC6T"
             org-gcal-file-alist '(("sanghyuk.park85@gmail.com" .  "~/Dropbox/org/appt_gcal.org")
