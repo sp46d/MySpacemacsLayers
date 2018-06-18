@@ -21,6 +21,7 @@
     (org :location built-in)
     (org-agenda :location built-in)
     org-download
+    org-mime
     org-present
     org-gcal
     org-journal
@@ -469,6 +470,17 @@ Headline^^            Visit entry^^               Filter^^                    Da
       (spacemacs/set-leader-keys-for-major-mode 'org-mode
         "iy" 'org-download-yank
         "is" 'org-download-screenshot))))
+
+(defun myOrg/init-org-mime ()
+  (use-package org-mime
+    :defer t
+    :commands (org-mime-htmlize org-mime-org-buffer-htmlize)
+    :init
+    (progn
+      (spacemacs/set-leader-keys-for-major-mode 'message-mode
+        "M" 'org-mime-htmlize)
+      (spacemacs/set-leader-keys-for-major-mode 'org-mode
+        "m" 'org-mime-org-buffer-htmlize))))
 
 (defun myOrg/init-org-present ()
   (use-package org-present
