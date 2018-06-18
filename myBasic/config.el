@@ -38,6 +38,10 @@
 (global-visual-line-mode)
 (add-hook 'text-mode-hook 'spacemacs/toggle-visual-line-navigation-on)
 
+;; Tab width
+(setq default-tab-width 4)
+(setq-default indent-tabs-mode nil)
+
 ;; Customize Solarized-theme
 (defvar after-load-theme-hook nil
   "Hook run after a color theme is loaded using `load-theme'.")
