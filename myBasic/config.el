@@ -23,10 +23,18 @@
   "Sort dired listings with directories first before adding marks."
   (mydired-sort))
 
-;; Startup screen size
-(add-to-list 'default-frame-alist '(height . 120))
-(add-to-list 'default-frame-alist '(width . 130))
-(setq initial-frame-alist '((left . 300) (top . 10)))
+;; Adaptive default screen size
+(defun my/default-frame-size ()
+  (progn
+    (if (> (x-display-pixel-width) 1500)
+        (progn
+          (add-to-list 'default-frame-alist '(width . 130))
+          (setq initial-frame-alist '((left . 300) (top . 10))))
+      (progn
+        (add-to-list 'default-frame-alist '(width . 100))
+        (setq initial-frame-alist '((left . 150) (top . 10)))))
+    (add-to-list 'default-frame-alist '(height . 120))))
+(my/default-frame-size)
 
 ;; Backup setting
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
