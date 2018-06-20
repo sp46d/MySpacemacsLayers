@@ -16,7 +16,7 @@
 
 (defun myBasic/init-reveal-in-osx-finder ()
   (use-package reveal-in-osx-finder
-    ;; :commands (reveal-in-osx-finder)
+    :commands (reveal-in-osx-finder)
     :init
     (progn
       (spacemacs/declare-prefix "o" "my-prefix")
