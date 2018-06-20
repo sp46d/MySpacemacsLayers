@@ -69,6 +69,11 @@
        '(powerline-active2 ((t (:background "#5D4D7A" :foreground "#b2b2b2"))))
        '(powerline-inactive1 ((t (:background "#073642" :foreground "#586e75"))))
        '(powerline-inactive2 ((t (:background "#073642" :foreground "#586e75"))))
+       ;; Linum-relative current line
+       '(linum-relative-current-face ((t (:foreground "#839496"
+                                                      :underline nil
+                                                      :weight normal
+                                                      :background "#002b36"))))
        ))
   (if (member 'solarized-light custom-enabled-themes)
       (custom-theme-set-faces
@@ -81,6 +86,19 @@
        '(powerline-active2 ((t (:background "#D3D3E7" :foreground "#655370"))))
        '(powerline-inactive1 ((t (:background "#EFEAE9" :foreground "#655370"))))
        '(powerline-inactive2 ((t (:background "#EFEAE9" :foreground "#655370"))))
+       ;; Linum-relative current line
+       '(linum-relative-current-face ((t (:foreground "#657b83"
+                                                      :underline nil
+                                                      :weight normal
+                                                      :background "#fdf6e3"))))
        )))
 (customize-solarized)
 (add-hook 'after-load-theme-hook 'customize-solarized)
+
+;; Set up jump to registers
+(spacemacs/set-leader-keys "jr" 'jump-to-register)
+(set-register ?i '(file . "~/Dropbox/org/BeOrg/inbox.org"))
+(set-register ?b '(file . "~/Dropbox/Bibliography/references.bib"))
+(set-register ?p '(file . "~/Dropbox/org/BeOrg/projects.org"))
+(set-register ?n '(file . "~/Dropbox/org/BeOrg/notes.org"))
+(set-register ?t '(file . "~/Dropbox/org/BeOrg/todo.org"))
