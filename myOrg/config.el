@@ -27,3 +27,20 @@ the project root). If it an absolute path, one global file is
 used.")
 
 (spacemacs|defvar-company-backends org-mode)
+
+(setq org-refile-targets
+      '(("~/Dropbox/org/BeOrg/todo.org" :level . 1)
+        ("~/Dropbox/org/BeOrg/notes.org" :level . 1)
+        ("~/Dropbox/org/someday.org" :level . 1)
+        ("~/Dropbox/org/BeOrg/projects.org" :level . 2)))
+(setq org-reverse-note-order t)
+
+(setq org-link-frame-setup (quote ((vm . vm-visit-folder-other-frame)
+                                   (vm-imap . vm-visit-imap-folder-other-frame)
+                                   (gnus . org-gnus-no-new-news)
+                                   (file . find-file)
+                                   (wl . wl-other-frame))))
+
+(setq org-archive-location (concat "~/Dropbox/org/archive/archive-"
+                                   (format-time-string "%Y%m" (current-time)) ".org_archive::"))
+
