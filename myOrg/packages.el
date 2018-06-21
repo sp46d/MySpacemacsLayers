@@ -532,4 +532,4 @@ Headline^^            Visit entry^^               Filter^^                    Da
   (use-package ox-ipynb
     :defer t
     :init
-    (with-eval-after-load 'org (require 'oxipynb))))
+    (with-eval-after-load 'org (require 'ox-ipynb))))
