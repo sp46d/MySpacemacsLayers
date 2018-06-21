@@ -25,6 +25,7 @@
     org-present
     org-gcal
     org-journal
+    (ox-ipynb :location local)
     ))
 
 (defun myOrg/post-init-company ()
@@ -526,3 +527,9 @@ Headline^^            Visit entry^^               Filter^^                    Da
     :commands (org-journal-new-entry)
     :config
     (setq org-journal-dir "~/Dropbox/org/.org/journal/")))
+
+(defun myOrg/init-ox-ipynb ()
+  (use-package ox-ipynb
+    :defer t
+    :init
+    (with-eval-after-load 'org (require 'oxipynb))))
