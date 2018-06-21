@@ -356,7 +356,6 @@ Will work on both org-mode and any mode that accepts plain html."
       (setq org-directory "~/Dropbox/org")
       (setq org-agenda-files
             '("~/Dropbox/org/BeOrg/inbox.org"
-              "~/Dropbox/org/BeOrg/projects.org"
               "~/Dropbox/org/BeOrg/todo.org"
               "~/Dropbox/org/BeOrg/notes.org"
               "~/Dropbox/org/appt_gcal.org"
