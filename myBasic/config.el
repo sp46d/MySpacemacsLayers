@@ -97,8 +97,3 @@
 
 ;; Set up jump to registers
 (spacemacs/set-leader-keys "jr" 'jump-to-register)
-(set-register ?i '(file . "~/Dropbox/org/BeOrg/inbox.org"))
-(set-register ?b '(file . "~/Dropbox/Bibliography/references.bib"))
-(set-register ?p '(file . "~/Dropbox/org/BeOrg/projects.org"))
-(set-register ?n '(file . "~/Dropbox/org/BeOrg/notes.org"))
-(set-register ?t '(file . "~/Dropbox/org/BeOrg/todo.org"))
