@@ -18,6 +18,7 @@
     gnuplot
     htmlize
     (ob :location built-in)
+    ob-ipython
     (org :location built-in)
     (org-agenda :location built-in)
     org-download
@@ -75,6 +76,19 @@
       (add-hook 'org-mode-hook 'spacemacs//org-babel-do-load-languages)
       ;; Fix redisplay of inline images after a code block evaluation.
       (add-hook 'org-babel-after-execute-hook 'spacemacs/ob-fix-inline-images))))
+
+(defun myOrg/init-ob-ipython ()
+  (use-package ob-ipython
+    :defer t
+    :load-path "~/scimax"
+    :init
+    (setq scimax-dir "~/scimax")
+    :config
+    (require 'scimax-org-babel-ipython-upstream)))
+
+(defun myOrg/post-init-ob-ipython ()
+  (with-eval-after-load 'org-mode
+    (require 'ob-ipython)))
 
 (defun myOrg/init-org ()
   (use-package org
@@ -458,6 +472,10 @@ Headline^^            Visit entry^^               Filter^^                    Da
       (kbd "M-RET") 'org-agenda-show-and-scroll-up
       (kbd "M-SPC") 'spacemacs/org-agenda-transient-state/body
       (kbd "s-M-SPC") 'spacemacs/org-agenda-transient-state/body)))
+
+(defun myOrg/pre-init-org ()
+  (spacemacs|use-package-add-hook org
+    :post-config (add-to-list 'org-babel-load-languages '(ipython . t))))
 
 (defun myOrg/init-org-download ()
   (use-package org-download
