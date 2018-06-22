@@ -11,7 +11,7 @@
 
 (setq myIpython-packages
       '(
-        ob-iptyhon
+        ob-ipython
         org
         (ox-ipynb :location local)
         ))
