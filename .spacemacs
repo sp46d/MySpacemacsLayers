@@ -132,8 +132,8 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Source Code Pro";;"DejaVu Sans Mono"
-                               :size 14
+   dotspacemacs-default-font '("Droid Sans Mono Slashed" ;;"Input Mono" ;;"Source Code Pro"
+                               :size 13
                                :weight normal
                                :width normal
                                :powerline-scale 1.3)
@@ -331,6 +331,12 @@ you should place your code here."
         '(("PDF Viewer" "/Applications/Skim.app/Contents/SharedSupport/displayline %n %o %b")))
   ;; Latex sub- and super-scripts setting
   (setq font-latex-script-display nil)
+  ;; My jump-to-register list
+  (set-register ?i '(file . "~/Dropbox/org/BeOrg/inbox.org"))
+  (set-register ?b '(file . "~/Dropbox/Bibliography/references.bib"))
+  (set-register ?l '(file . "~/Dropbox/org/self_learning.org"))
+  (set-register ?n '(file . "~/Dropbox/org/BeOrg/notes.org"))
+  (set-register ?t '(file . "~/Dropbox/org/BeOrg/todo.org"))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
