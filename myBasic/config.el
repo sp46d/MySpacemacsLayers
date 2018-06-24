@@ -62,13 +62,15 @@
       (custom-theme-set-faces
        'solarized-dark
        ;; Org block
-       '(org-block-begin-line ((t (:foreground "#9EA0E5":background "#073642"))))
-       '(org-block-end-line ((t (:foreground "#9EA0E5":background "#073642"))))
+       '(org-block-begin-line ((t (:foreground "#69B7F0" :background "#073642"))))
+       '(org-block-end-line ((t (:foreground "#69B7F0" :background "#073642"))))
        ;; Power line
        '(powerline-active1 ((t (:background "#5D4D7A" :foreground "#b2b2b2"))))
        '(powerline-active2 ((t (:background "#5D4D7A" :foreground "#b2b2b2"))))
        '(powerline-inactive1 ((t (:background "#073642" :foreground "#586e75"))))
        '(powerline-inactive2 ((t (:background "#073642" :foreground "#586e75"))))
+       ;; Ivy current match
+       `(ivy-current-match ((t (:weight bold :background "#073642" :underline t))))
        ;; Linum-relative current line
        '(linum-relative-current-face ((t (:foreground "#839496"
                                                       :underline nil
@@ -79,13 +81,15 @@
       (custom-theme-set-faces
        'solarized-light
        ;; Org block
-       '(org-block-begin-line ((t (:foreground "#3f4d91":background "#eee8d5"))))
-       '(org-block-end-line ((t (:foreground "#3f4d91":background "#eee8d5"))))
+       '(org-block-begin-line ((t (:foreground "#00629D" :background "#eee8d5"))))
+       '(org-block-end-line ((t (:foreground "#00629D" :background "#eee8d5"))))
        ;; Power line
        '(powerline-active1 ((t (:background "#D3D3E7" :foreground "#655370"))))
        '(powerline-active2 ((t (:background "#D3D3E7" :foreground "#655370"))))
        '(powerline-inactive1 ((t (:background "#EFEAE9" :foreground "#655370"))))
        '(powerline-inactive2 ((t (:background "#EFEAE9" :foreground "#655370"))))
+       ;; Ivy current match
+       `(ivy-current-match ((t (:weight bold :background "#eee8d5" :underline t))))
        ;; Linum-relative current line
        '(linum-relative-current-face ((t (:foreground "#657b83"
                                                       :underline nil
