@@ -40,6 +40,7 @@ values."
      markdown
      myBasic
      myBibtex
+     myIpython
      (myOrg :variables org-babel-load-languages
             '((latex . t)
               (shell . t)))
@@ -132,7 +133,10 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Droid Sans Mono Slashed" ;;"Input Mono" ;;"Source Code Pro"
+   dotspacemacs-default-font '(;;"Droid Sans Mono Slashed"
+                               ;; "Input Mono"
+                               "Roboto Mono"
+                               ;;"Source Code Pro"
                                :size 13
                                :weight normal
                                :width normal
