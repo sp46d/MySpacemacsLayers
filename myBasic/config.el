@@ -76,7 +76,11 @@
                                                       :underline nil
                                                       :weight normal
                                                       :background "#002b36"))))
+       ;; Org journal calendar entry face
        `(org-journal-calendar-entry-face ((t (:foreground "#b58900" :weight bold))))
+       ;; Underscore matching parenthesis
+       `(sp-show-pair-match-face
+         ((t (:foreground "#d33682" :weight bold :underline t))))
        ))
   (if (member 'solarized-light custom-enabled-themes)
       (custom-theme-set-faces
@@ -96,7 +100,11 @@
                                                       :underline nil
                                                       :weight normal
                                                       :background "#fdf6e3"))))
+       ;; Org journal calendar entry face
        `(org-journal-calendar-entry-face ((t (:foreground "#b58900" :weight bold))))
+       ;; Underscore matching parenthesis
+       `(sp-show-pair-match-face
+         ((t (:foreground "#d33682" :weight bold :underline t))))
        )))
 (customize-solarized)
 (add-hook 'after-load-theme-hook 'customize-solarized)
