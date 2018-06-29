@@ -44,3 +44,5 @@ used.")
 (setq org-archive-location (concat "~/Dropbox/org/archive/archive-"
                                    (format-time-string "%Y%m" (current-time)) ".org_archive::"))
 
+(setq org-todo-keyword-faces
+      '(("TODO" :foreground "orange red" :weight bold)))
