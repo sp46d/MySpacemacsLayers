@@ -76,6 +76,7 @@
                                                       :underline nil
                                                       :weight normal
                                                       :background "#002b36"))))
+       `(org-journal-calendar-entry-face ((t (:foreground "#b58900" :weight bold))))
        ))
   (if (member 'solarized-light custom-enabled-themes)
       (custom-theme-set-faces
@@ -95,6 +96,7 @@
                                                       :underline nil
                                                       :weight normal
                                                       :background "#fdf6e3"))))
+       `(org-journal-calendar-entry-face ((t (:foreground "#b58900" :weight bold))))
        )))
 (customize-solarized)
 (add-hook 'after-load-theme-hook 'customize-solarized)
